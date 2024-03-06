@@ -7,10 +7,10 @@
   top:0;
   left: 0;
   right: 0;
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgb(220,220,220);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.6);
   z-index: 100;
-
+  border: 1px rgb(248,248,248) solid;
 }
 
 .left-sec{
@@ -56,15 +56,21 @@
 }
 .search-box:focus{
   outline:none;
-  border:1px solid cornflowerblue;
+  border:1px solid red;
   z-index: 1;
 }
 .button-search{
   height: 40px;
   width: 65px;
-  background-color: rgb(240,240,240);
+  background-color: rgba(240,240,240,0.7);
+  backdrop-filter: blur(10px);
   border: 1px solid rgb(192,192,192);
   margin-left: -1px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .button-mic{
   height: 40px;
@@ -72,6 +78,13 @@
   border-radius:20px;
   margin-left: 10px;
   border:none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240,240,240,0.7);
+  backdrop-filter: blur(10px);
 }
 
 .icon-search{
@@ -79,7 +92,6 @@
 }
 .icon-mic{
   width: 20px;
-  object-fit: contain;
 }
 
 .right-sec{
@@ -92,39 +104,48 @@
   flex-shrink: 0;
 }
 
-.icon-upload,.icon-more{
+.icon-upload,.icon-more,.icon-notify{
   height: 26px;
+  border-radius: 13px;
 }
-.icon-notify{
-  height: 30px;
-  margin-top: 6px;
+.icon-upload{
+  margin-left: 2px;
 }
 .icon-current-profile{
-  border-radius: 15px;
-  height: 30px;
+  border-radius: 20px;
+  height: 40px;
 }
 .icon-notify-container{
   position: relative;
 }
 .notify-counter{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top:8px;
-  right: 1px;
-  background-color: #d22020;
-  color:white;
+  top: 3px;
+  right: 3px;
+  background-color: rgb(240,240,240);
+  color:red;
   font-size: 10px;
-  padding: 2px 5px;
-  border-radius: 12px;
+  height: 15px;
+  width: 15px;
+  border-radius: 10px;
+  border: 1px solid red;
 
 }
 
-.button-search,.button-mic,
 .icon-upload-div,.icon-more-div,.icon-notify-container{
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
 }
 .button-search .tooltip,
 .button-mic .tooltip,
@@ -148,11 +169,12 @@
 }
 .icon-upload-div .tooltip,
 .icon-more-div .tooltip{
-  bottom: -36px;
+  bottom: -25px;
 }
 .icon-notify-container .tooltip{
-  bottom: -31px;
+  bottom: -38px;
 }
+
 .button-search:hover .tooltip,
 .button-mic:hover .tooltip,
 .icon-upload-div:hover .tooltip,
